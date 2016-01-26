@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin-and-padding</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            font-family: "\5FAE\8F6F\96C5\9ED1";
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+        }
+        .container:after{
+            display: table;
+            content: "";
+            clear: both;
+        }
+        .test{
+            width: 50%;
+            float: left;
+        }
+        .margin{
+            margin: 20px;
+        }
+        .margin1,.padding1{
+            background-color: blue;
+            background-size: 100% 100%;
+            background-clip: content-box;
+        }
+        .margin2,.padding2{
+            background-color: yellowgreen;
+            background-clip: content-box;
+            background-size: 100% 100%;
+        }
+        .padding{
+            padding: 20px;
+        }
+        p{
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="test margintest"> 
+            <div class="margin margin1">marign1</div>
+            <div class="margin margin2">margin2</div>
+        </section>
+        <section class="test paddingtest">
+            <div class="padding padding1">padding1</div>
+            <div class="padding padding2">padding2</div>
+        </section>
+        <p>margin1和margin2的间距只有20px,margin1的margin-bottom和margin2的margin-top重合了</p>
+        <p>padding1和padding2的间距有40px,background-clip的设定为content-box</p>
+    </main>
+    
+</body>
+</html>
