@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-test1</title>
+    <script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<style>
+    .hilite{
+        color: red;
+    }
+</style>
+<body>
+    hello world
+    <button onclick="hide(this,true);debug('hide button 1');">hide1</button>
+    <button onclick="hide(this); debug('hide button 2')">hide2</button>
+</body>
+    <script>
+        // function debug(msg){
+        //     var log = document.getElementById("debuglog");
+        //     if (!log) {
+        //         log = document.createElement("div");
+        //         log.id = "debuglog";
+        //         log.className = "abc";
+        //         log.innerHTML = "<h1>Debug Log</h1>";
+        //         document.body.appendChild(log);
+        //     }
+        //     //将消息包装在<pre>中，并添加至log中 
+        //     var pre = document.createElement("pre");
+        //     var text = document.createTextNode(msg);
+        //     pre.appendChild(text);
+        //     log.appendChild(pre);
+        // }
+        //通过js来隐藏元素的效果
+        function hide(e,reflow){
+            if(reflow){
+                e.style.display = "none";
+            } else {
+                e.style.visibility = "hidden";
+            }
+        }
+        function highlight(e) {
+            if (!e.className) {
+                e.className = "hilite";
+            } else {
+                e.className += " hilite";
+            }
+        }
+        //jquery重写debug
+        function debug(msg) { 
+            var log = $("#debuglog") //找到要显示的msg的元素
+            if (log.length == 0) {  //如果不存在则创建
+                log = $("<div id = 'debuglog'><h1>Debug Log</h1></div>");
+                log.appendTo(document.body); //并将其追加到body里
+            }
+            log.append($("<pre/>").text(msg)); //将msg包装在<pre>中，再追加到log里
+        }
+    </script>
+</html>

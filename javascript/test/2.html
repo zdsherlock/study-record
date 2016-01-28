@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-2</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/1.jpg" alt="">
+    <img src="images/2.png" alt="">
+    <img src="images/3.png" alt="">
+    <img src="images/4.png" alt="">
+    <img src="images/5.png" alt="">
+    <img src="images/6.png" alt="">
+    <p>点击消除图片</p>
+<script>
+        //load事件只有在文档加载完成后才会触发
+    window.onload = function() {//当文档加载完成时执行这里的代码
+        //找到文档中的所有的<img>标签
+        var images = document.getElementsByTagName("img");
+        //遍历 images,给每个节点的"click"事件添加事件处理程序
+        //在点击图片的时候将图片隐藏
+        for (var i = 0 ; i < images.length; i ++ ){
+            var image = images[i];
+            if (image.addEventListener) //这里的if语句如何返回true 或 false
+                {
+                    image.addEventListener("click",hide,false);
+                } else {
+                    image.attachEvent("onclick",hide)
+                }
+        }
+        //上述注册的事件处理函数
+        function hide(event) {
+            event.target.style.visibility = "hidden";
+        }
+    }
+</script>
+</body>
+</html>
