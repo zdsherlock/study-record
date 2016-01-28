@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-3</title>
+</head>
+<body>
+    <button onclick="definition()">test button</button>
+</body>
+<script>
+    function definition() {
+        var π = 3.14;//测试字符π是否可以作为标识符识别
+        var test = document.getElementById("test"); //定义索要创建的元素
+        
+        if(!test) {//如果该元素不存在执行以下代码
+           test =  document.createElement("div"); //生成该元素为div
+           test.id = "test";//给予元素id
+           test.innerHTML = "<h1>This is a test</h1>"//直接给予元素初始内容
+           document.body.appendChild(test);//将元素在html中生成
+        } 
+        
+        var pre = document.createElement("pre");//生成pre元素
+        var text = document.createTextNode(π);//生成文本及节点
+        pre.appendChild(text);//将文本节点给予pre元素
+        test.appendChild(pre);//在test元素下生成pre元素
+    }
+</script>
+</html>
