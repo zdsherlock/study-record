@@ -1,0 +1,72 @@
+body{
+    background-color: #ffa700;
+    background-size: 100% 100%;
+}
+.pagecontainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+    text-align: center;
+}
+.rela{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.text{
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-family: "\9ED1\4F53";
+}
+.text11{
+    position: absolute;
+    top: 7%;
+    font-size: 22px;
+}
+.img{
+    width: 100%;
+}
+.img > img{
+    width: 100%;
+}
+.img11{
+    position: absolute;
+    top: 20%;
+    /*background-image: url("p001.png");
+    background-repeat: no-repeat;
+    background-size: 100%;*/
+}
+.img12{
+    position: absolute;
+    top: 60%;
+}
+.text-center{
+    text-align: center;
+}
+.page1{
+    display: none;
+}
+/*第一页*/
+.text21{
+    position: absolute;
+    top: 7%;
+}
+.select{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+}
+.select > .img{
+    margin-top: 10px;
+}
