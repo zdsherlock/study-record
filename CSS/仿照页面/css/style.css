@@ -28,6 +28,7 @@ body{
     font-size: 20px;
     font-family: "\9ED1\4F53";
 }
+/*第一页内容*/
 .text11{
     position: absolute;
     top: 7%;
@@ -56,17 +57,30 @@ body{
 .page1{
     display: none;
 }
-/*第一页*/
+/*第二页*/
 .text21{
     position: absolute;
-    top: 7%;
+    top: 3%;
 }
 .select{
     position: absolute;
-    top: 15%;
+    top: 7%;
     left: 5%;
     width: 90%;
 }
 .select > .img{
     margin-top: 10px;
+}
+.page2{
+    display: none;
+}
+.sun{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.women{
+    position: absolute;
+    top: 30%;
+    
 }
