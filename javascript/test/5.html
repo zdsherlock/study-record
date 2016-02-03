@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS布尔值转换的测试</title>
+</head>
+<style>
+    div{
+        font-size: 200px;
+        color: white;
+        background-color: red;
+    }
+</style>
+<body>
+    <div id="demo"></div>
+</body>
+<script>
+    window.onload = function(){
+        var x = new Object();
+        var y = null;
+        var z;
+        if (x) console.log(x);
+        if (y) console.log(y);
+        if (z) console.log(z);
+
+        var a = ['a','b','c']; //待复制元素数组
+        var b = [];             //复制到的目标空数组
+        for (var i = 0; i < a.length; i++) {//遍历a[]中的每个元素
+            b[i] = a[i];        //将元素值复制到b中建立a的副本
+        }
+         var x = a == b; //但a与b并不想等，因为不是同一个引用
+        document.write(x);
+        document.write(a);
+        document.write(b);
+    }
+</script>
+</html>
