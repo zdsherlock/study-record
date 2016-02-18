@@ -50,3 +50,4 @@ JS中唯一一个三元运算符（ternary operator) “？：”；<br>
 函数说明不能出现在if、while嵌套中<br>
 var f = function () {} 和 function f(){}好像不一样，但是没完全看懂<br>
 if中花括号可以省略，不过看起来会有比较多的麻烦，初期还是别省了<br> 
+for /in 的内容不是很理解<br>
